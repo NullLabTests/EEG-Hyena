@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+.env
+random_text.txt
+*.edf  # Sample EEG files
+*.pth  # Model checkpoints
