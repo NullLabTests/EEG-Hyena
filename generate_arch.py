@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')  # Non-GUI backend for headless
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch, Rectangle
 

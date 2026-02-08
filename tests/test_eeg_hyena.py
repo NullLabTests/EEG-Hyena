@@ -23,3 +23,13 @@ def test_training():
     features, labels = generate_synthetic_data(n_samples=1, seq_len=100, n_channels=1)
     assert features.shape == (1, 100, 64)
     assert labels.shape == (1, 100)
+
+@pytest.mark.skip(reason="Requires MNE sample data download")
+def test_mne_sample():
+    import mne
+    sample_data_path = mne.datasets.sample.data_path()
+    raw_path = sample_data_path / 'MEG' / 'sample' / 'sample_audvis_raw.fif'
+    raw = mne.io.read_raw_fif(raw_path, preload=True)
+    raw.pick_types(eeg=True)
+    features = preprocess_eeg(raw)
+    assert len(features) > 0
