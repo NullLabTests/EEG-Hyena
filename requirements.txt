@@ -2,3 +2,4 @@ torch
 mne
 numpy
 scikit-learn
+pytest

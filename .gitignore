@@ -8,5 +8,6 @@ build/
 venv/
 .env
 random_text.txt
-*.edf  # Sample EEG files
-*.pth  # Model checkpoints
+*.edf
+*.pth
+tests/__pycache__/

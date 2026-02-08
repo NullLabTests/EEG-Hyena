@@ -4,6 +4,7 @@
 [![PyPI version](https://badge.fury.io/py/eeg-hyena.svg)](https://badge.fury.io/py/eeg-hyena)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)]()
+[![CI](https://github.com/NullLabTests/EEG-Hyena/actions/workflows/ci.yml/badge.svg)](https://github.com/NullLabTests/EEG-Hyena/actions/workflows/ci.yml)
 
 Adapted Hyena Hierarchy for real-time EEG signal-to-text generation using PyTorch and MNE for biosignal processing. This project extends the original Hyena convolutional language model to handle EEG inputs, preprocessing signals into sequences for character-level prediction.
 
@@ -37,6 +38,14 @@ model = EEGHyenaModel(vocab_size=256, d_model=512, n_layers=6)  # ASCII chars
 - Hyena-based sequence modeling for text generation.
 - EWC for continual learning.
 - Production-ready with packaging.
+
+## Testing
+Run `pytest` after `pip install pytest`.
+
+Tests cover preprocessing and model forward pass with synthetic data.
+
+## Architecture
+![Hyena EEG Model](https://via.placeholder.com/800x400?text=EEG-Hyena+Arch)  # Replace with real img URL
 
 ## Contributing
 Fork and PR!

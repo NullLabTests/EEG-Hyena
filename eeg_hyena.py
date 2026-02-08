@@ -4,8 +4,9 @@ import torch.nn.functional as F
 import mne
 import numpy as np
 from sklearn.decomposition import PCA
+import copy
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")  # Force CPU for no-GPU setups
 
 class EEGHyenaModel(nn.Module):
     """
