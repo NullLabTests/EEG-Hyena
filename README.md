@@ -1,7 +1,6 @@
 # EEG-Hyena
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PyPI version](https://badge.fury.io/py/eeg-hyena.svg)](https://badge.fury.io/py/eeg-hyena)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)]()
 [![CI](https://github.com/NullLabTests/EEG-Hyena/actions/workflows/ci.yml/badge.svg)](https://github.com/NullLabTests/EEG-Hyena/actions/workflows/ci.yml)
@@ -46,10 +45,19 @@ Run `pytest` after `pip install pytest`.
 Tests cover preprocessing and model forward pass with synthetic data.
 
 ## Architecture
-![Hyena EEG Model Architecture](https://raw.githubusercontent.com/wiki/NullLabTests/EEG-Hyena/images/arch.png)  # Upload a real diagram to wiki or assets
+![Hyena EEG Model Architecture](https://via.placeholder.com/800x400?text=EEG-Hyena+Architecture)  # Upload a real diagram to wiki or assets
 
 ## Contributing
 Fork and PR!
 
 ## License
 MIT
+
+## Deployment
+Build Docker image: `docker build -t eeg-hyena .`
+Run: `docker run -it eeg-hyena python train.py`
+
+## Publishing to PyPI
+1. Update version in setup.py.
+2. `python setup.py sdist bdist_wheel`
+3. `twine upload dist/*` (requires PyPI account).

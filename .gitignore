@@ -11,3 +11,5 @@ random_text.txt
 *.edf
 *.pth
 tests/__pycache__/
+/Dockerfile
+model.pth
