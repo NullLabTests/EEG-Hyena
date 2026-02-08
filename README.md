@@ -45,7 +45,7 @@ Run `pytest` after `pip install pytest`.
 Tests cover preprocessing and model forward pass with synthetic data.
 
 ## Architecture
-![Hyena EEG Model Architecture](https://via.placeholder.com/800x400?text=EEG-Hyena+Architecture)  # Upload a real diagram to wiki or assets
+![Hyena EEG Model Architecture](https://github.com/NullLabTests/EEG-Hyena/raw/master/arch.png)  # Upload a real diagram to wiki or assets
 
 ## Contributing
 Fork and PR!

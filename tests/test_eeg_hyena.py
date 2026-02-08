@@ -17,3 +17,9 @@ def test_model_forward():
     inputs = torch.randn(1, 100, 64)
     outputs = model(inputs)
     assert outputs.shape == (1, 100, 256)
+
+def test_training():
+    from train import generate_synthetic_data
+    features, labels = generate_synthetic_data(n_samples=1, seq_len=100, n_channels=1)
+    assert features.shape == (1, 100, 64)
+    assert labels.shape == (1, 100)

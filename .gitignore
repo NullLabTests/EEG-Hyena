@@ -13,3 +13,4 @@ random_text.txt
 tests/__pycache__/
 /Dockerfile
 model.pth
+*.ipynb_checkpoints

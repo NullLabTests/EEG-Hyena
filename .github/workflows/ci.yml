@@ -23,6 +23,7 @@ jobs:
         pip install flake8 pytest
         python train.py  # Test training script
         pip install -r requirements.txt
+        pip install matplotlib
     - name: Lint with flake8
       run: |
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
