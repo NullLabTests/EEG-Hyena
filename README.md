@@ -6,7 +6,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)]()
 [![CI](https://github.com/NullLabTests/EEG-Hyena/actions/workflows/ci.yml/badge.svg)](https://github.com/NullLabTests/EEG-Hyena/actions/workflows/ci.yml)
 
-Adapted Hyena Hierarchy for real-time EEG signal-to-text generation using PyTorch and MNE for biosignal processing. This project extends the original Hyena convolutional language model to handle EEG inputs, preprocessing signals into sequences for character-level prediction.
+Adapted Hyena Hierarchy for real-time EEG signal-to-text generation using PyTorch and MNE for biosignal processing. This project extends the original Hyena convolutional language model to handle EEG inputs, preprocessing signals into sequences for character-level prediction. CPU-friendly for no-GPU setups.
 
 ## Acknowledgments
 This project is based on the [Hyena-Hierarchy](https://github.com/Suro-One/Hyena-Hierarchy) by Suro-One (@OASIS_Suro_One). The core model architecture and EWC implementation are adapted from their work on convolutional LMs inspired by the Hyena Hierarchy paper.
@@ -38,6 +38,7 @@ model = EEGHyenaModel(vocab_size=256, d_model=512, n_layers=6)  # ASCII chars
 - Hyena-based sequence modeling for text generation.
 - EWC for continual learning.
 - Production-ready with packaging.
+- CPU-only compatibility.
 
 ## Testing
 Run `pytest` after `pip install pytest`.
@@ -45,7 +46,7 @@ Run `pytest` after `pip install pytest`.
 Tests cover preprocessing and model forward pass with synthetic data.
 
 ## Architecture
-![Hyena EEG Model](https://via.placeholder.com/800x400?text=EEG-Hyena+Arch)  # Replace with real img URL
+![Hyena EEG Model Architecture](https://raw.githubusercontent.com/wiki/NullLabTests/EEG-Hyena/images/arch.png)  # Upload a real diagram to wiki or assets
 
 ## Contributing
 Fork and PR!
