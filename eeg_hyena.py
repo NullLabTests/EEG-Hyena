@@ -101,13 +101,14 @@ def preprocess_eeg(raw, sfreq=250, low_freq=1, high_freq=40, n_components=64):
     raw.filter(low_freq, high_freq)
     # Example: create fake epochs for demo (replace with real events/labels)
     events = mne.make_fixed_length_events(raw, duration=1.0)
-    epochs = mne.Epochs(raw, events, preload=True)
+    epochs = mne.Epochs(raw, events, tmin=0, tmax=0.5, baseline=None, preload=True)
     data = epochs.get_data()  # (n_epochs, n_channels, n_times)
     # Reshape and apply PCA per epoch
-    pca = PCA(n_components=n_components)
     features = []
     for ep in data:
         ep_flat = ep.T  # (n_times, n_channels)
+        n_comp = min(n_components, ep_flat.shape[1])
+        pca = PCA(n_components=n_comp)
         feat = pca.fit_transform(ep_flat)  # (n_times, n_components)
         features.append(feat)
     return np.array(features)  # Adapt to sequence for model
