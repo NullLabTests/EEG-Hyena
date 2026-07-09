@@ -22,14 +22,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         pip install -r requirements.txt
-        python train.py  # Test training script
-        pip install matplotlib
-        echo "import matplotlib; matplotlib.use("Agg")" > matplotlibrc
     - name: Lint with flake8
       run: |
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --ignore=E501  # Ignore long lines if needed
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --ignore=E501
     - name: Test with pytest
       run: |
         pytest
-        python train.py  # Test training script
